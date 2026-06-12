@@ -1,5 +1,6 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,9 +16,6 @@
     href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&display=swap"
     rel="stylesheet" />
   <style>
-    /* ============================================================
-   WHITEBOARD KIDS — design system
-   ============================================================ */
     :root {
       --paper: #FFF9EF;
       --paper-2: #FFF3DD;
@@ -54,7 +52,6 @@
       background: var(--paper);
       color: var(--ink);
       overflow-x: hidden;
-      /* subtle paper grid like a whiteboard sketchbook */
       background-image:
         radial-gradient(rgba(43, 35, 68, .045) 1.2px, transparent 1.2px);
       background-size: 26px 26px;
@@ -87,7 +84,6 @@
       margin-inline: auto
     }
 
-    /* ---------- rainbow top strip ---------- */
     .rainbow-strip {
       height: 8px;
       width: 100%;
@@ -106,7 +102,6 @@
       }
     }
 
-    /* ---------- nav ---------- */
     nav {
       position: fixed;
       top: 22px;
@@ -526,7 +521,6 @@
     }
 
     .phone::after {
-      /* dynamic island — sits on the left edge in landscape */
       content: "";
       position: absolute;
       top: 50%;
@@ -555,7 +549,6 @@
       object-fit: cover
     }
 
-    /* placeholder art shown until real screenshot is dropped in */
     .screen-placeholder {
       position: absolute;
       inset: 0;
@@ -620,7 +613,6 @@
       opacity: .7;
     }
 
-    /* floating stickers around the phone */
     .float-sticker {
       position: absolute;
       display: grid;
@@ -679,7 +671,6 @@
       }
     }
 
-    /* "plays sideways" badge under the hero phone */
     .orient-tag {
       position: absolute;
       bottom: 0;
@@ -1508,6 +1499,167 @@
       font-size: .97rem
     }
 
+    /* ---------- reviews ---------- */
+    .reviews {
+      padding: 3.5rem 0 1rem;
+    }
+
+    /* country filter pills */
+    .country-pills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: .7rem;
+      margin-bottom: 2.6rem;
+    }
+
+    .country-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      font-family: var(--font-body);
+      font-weight: 800;
+      font-size: .95rem;
+      color: var(--ink);
+      background: #fff;
+      border: 3px solid var(--ink);
+      border-radius: 999px;
+      padding: .5rem .95rem;
+      cursor: pointer;
+      box-shadow: 0 4px 0 rgba(43, 35, 68, .15);
+      transition: translate .15s, box-shadow .15s, background .15s;
+    }
+
+    .country-pill .flag {
+      font-size: 1.15rem;
+      line-height: 1;
+    }
+
+    .country-pill .pill-count {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: .82rem;
+      color: #fff;
+      background: var(--ink);
+      border-radius: 999px;
+      padding: .08rem .5rem;
+      min-width: 1.4rem;
+      text-align: center;
+      transition: background .15s;
+    }
+
+    .country-pill:hover {
+      translate: 0 -3px;
+    }
+
+    .country-pill.active {
+      background: var(--yellow);
+      translate: 0 -3px;
+      box-shadow: 0 6px 0 rgba(43, 35, 68, .2);
+    }
+
+    .country-pill.active .pill-count {
+      background: var(--red);
+    }
+
+    /* review cards */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.6rem;
+    }
+
+    .review-card {
+      display: flex;
+      flex-direction: column;
+      gap: .8rem;
+      background: #fff;
+      border: 3px solid var(--ink);
+      border-radius: 28px;
+      padding: 1.7rem 1.6rem;
+      box-shadow: var(--shadow-sticker);
+      position: relative;
+      transition: translate .2s, rotate .2s;
+    }
+
+    .review-card:hover {
+      translate: 0 -6px;
+      rotate: -1deg;
+    }
+
+    .review-card .quote-mark {
+      position: absolute;
+      top: .6rem;
+      right: 1.1rem;
+      font-family: var(--font-display);
+      font-size: 3.2rem;
+      line-height: 1;
+      color: var(--accent, var(--yellow));
+      opacity: .45;
+      pointer-events: none;
+    }
+
+    .review-stars {
+      font-size: 1rem;
+      letter-spacing: .12em;
+      color: var(--orange);
+    }
+
+    .review-card h3 {
+      font-size: 1.18rem;
+      font-weight: 600;
+      line-height: 1.25;
+      padding-right: 1.6rem;
+    }
+
+    .review-card .review-desc {
+      font-weight: 700;
+      color: var(--ink-soft);
+      line-height: 1.65;
+      font-size: .97rem;
+      flex: 1;
+    }
+
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      margin-top: .4rem;
+      padding-top: .9rem;
+      border-top: 2.5px dashed rgba(43, 35, 68, .14);
+    }
+
+    .review-author .flag {
+      font-size: 1.6rem;
+      line-height: 1;
+      flex: 0 0 auto;
+    }
+
+    .review-author .who {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .review-author .name {
+      font-weight: 900;
+      font-size: .95rem;
+    }
+
+    .review-author .country {
+      font-weight: 800;
+      font-size: .8rem;
+      color: var(--ink-soft);
+    }
+
+    .reviews-empty {
+      grid-column: 1 / -1;
+      text-align: center;
+      font-weight: 800;
+      color: var(--ink-soft);
+      padding: 2rem 0;
+    }
+
     /* ---------- final CTA ---------- */
     .cta {
       text-align: center;
@@ -1689,6 +1841,10 @@
         grid-template-columns: 1fr
       }
 
+      .reviews-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
       .nav-links {
         display: none
       }
@@ -1732,6 +1888,10 @@
       .stat-card .num {
         font-size: 1.8rem
       }
+
+      .reviews-grid {
+        grid-template-columns: 1fr
+      }
     }
 
     @media (prefers-reduced-motion:reduce) {
@@ -1758,7 +1918,8 @@
   <!-- ====================== NAV ====================== -->
   <nav id="nav">
     <a class="logo" href="#top">
-      <span class="logo-mark"><span>🖍️</span></span>
+      <span class="logo-mark" style="background:none;border:none;animation:none"><img src="images/icon.png" alt=""
+          style="width:36px;height:36px;border-radius:10px;object-fit:cover"></span>
       <span><b>Whiteboard&nbsp;Kids</b><small>Draw · Color · Smile</small></span>
     </a>
     <div class="nav-links">
@@ -1766,6 +1927,7 @@
       <a href="#categories">Categories</a>
       <a href="#screens">Screens</a>
       <a href="#play">Try it!</a>
+      <a href="#reviews">Reviews</a>
       <a href="#parents">For Parents</a>
     </div>
     <a class="btn btn-dark" href="https://apps.apple.com/in/app/drawing-color-paint-board/id6760696494" target="_blank"
@@ -1995,7 +2157,7 @@
           </div>
         </div>
       </div>
-      <p class="cats-more reveal">…and <b>many more categories</b> inside the app, with fresh pages to discover! 🎁</p>
+      <p class="cats-more reveal">…and <b>many more categories</b> inside the app, with fresh pages to discover!</p>
     </div>
   </section>
 
@@ -2010,13 +2172,6 @@
       </div>
     </div>
 
-    <!--
-    📸 HOW TO ADD YOUR SCREENSHOTS (the app is LANDSCAPE-only, so use landscape screenshots):
-    Drop your landscape iPhone screenshots into the  images/  folder with these names:
-      images/screen-1.png   images/screen-2.png   images/screen-3.png
-      images/screen-4.png   images/hero.png  (hero phone at the top)
-    They will appear automatically inside the sideways phone frames below.
-  -->
     <div class="shots-rail">
       <figure class="shot reveal">
         <div class="phone">
@@ -2218,13 +2373,12 @@
       let hue = 0;
       let drawing = false;
       let last = null;
-      let active = null;      // the shape currently being colored
+      let active = null;
       let dpr = 1;
-      let shapes = [];        // Path2D outlines, in CSS-pixel space
+      let shapes = [];
       const BRUSH = 18;
       const INK = '#2B2344';
 
-      // build the coloring shapes: a circle and a kid-style sun
       function buildShapes() {
         const r = canvas.getBoundingClientRect();
         const w = r.width, h = r.height;
@@ -2236,7 +2390,6 @@
         circle.arc(stack ? w / 2 : w * 0.26, stack ? h * 0.27 : h / 2, cr, 0, Math.PI * 2);
         shapes.push(circle);
 
-        // sun: round core + 8 detached triangle rays (all one fillable path)
         const sun = new Path2D();
         const sx = stack ? w / 2 : w * 0.74, sy = stack ? h * 0.73 : h / 2;
         const sr = cr * 0.58;
@@ -2268,7 +2421,6 @@
         strokeOutlines();
       }
 
-      // canvas size setup
       function resize() {
         dpr = devicePixelRatio || 1;
         const r = canvas.getBoundingClientRect();
@@ -2279,7 +2431,6 @@
         drawScene();
       }
 
-      // paint a stroke segment, clipped inside the active shape
       function paint(x1, y1, x2, y2) {
         if (!active) return;
         ctx.save();
@@ -2298,7 +2449,6 @@
         ctx.stroke();
         ctx.restore();
 
-        // redraw outlines on top so they stay crisp
         strokeOutlines();
       }
 
@@ -2309,7 +2459,6 @@
       }
 
       function shapeAt(x, y) {
-        // isPointInPath expects untransformed (device-pixel) coords
         return shapes.find(s => ctx.isPointInPath(s, x * dpr, y * dpr)) || null;
       }
 
@@ -2391,6 +2540,23 @@
     </div>
   </section>
 
+  <!-- ====================== REVIEWS ====================== -->
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <div class="section-head centered reveal">
+        <span class="kicker k-green">Loved Worldwide</span>
+        <h2>Little artists, big smiles 🌍</h2>
+        <p>Real words from happy families across the globe. Tap a country to see reviews from there.</p>
+      </div>
+
+      <!-- country filter pills (auto-built from data) -->
+      <div class="country-pills reveal" id="countryPills"></div>
+
+      <!-- review cards (auto-built from data) -->
+      <div class="reviews-grid" id="reviewsGrid"></div>
+    </div>
+  </section>
+
   <!-- ====================== CTA ====================== -->
   <section class="cta">
     <div class="container reveal">
@@ -2422,13 +2588,16 @@
     <div class="container">
       <div class="foot-grid">
         <a class="logo" href="#top">
-          <span class="logo-mark"><span>🖍️</span></span>
-          <span><b>Whiteboard&nbsp;Kids</b><small style="color:#BDB6D6">Draw · Color · Smile</small></span>
+          <span class="logo-mark" style="background:none;border:none"><img src="images/icon.png" alt=""
+              style="width:36px;height:36px;border-radius:10px;object-fit:cover"></span>
+          <span><b style="color:#fff">Whiteboard&nbsp;Kids</b><small style="color:#BDB6D6">Draw · Color ·
+              Smile</small></span>
         </a>
         <div class="foot-links">
           <a href="#tools">Tools</a>
           <a href="#categories">Categories</a>
           <a href="#screens">Screens</a>
+          <a href="#reviews">Reviews</a>
           <a href="#parents">Parents</a>
           <a href="https://apps.apple.com/in/app/drawing-color-paint-board/id6760696494" target="_blank"
             rel="noopener">App Store ↗</a>
@@ -2549,6 +2718,206 @@
         ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0);
         ctx.clearRect(0, 0, canvas.width, canvas.height); ctx.restore();
       });
+    })();
+
+    /* ============================================================
+       REVIEWS — data-driven (just edit the REVIEWS array below)
+       ------------------------------------------------------------
+       Each review:
+       {
+         title:   "Short headline",
+         desc:    "The full review text…",
+         name:    "Reviewer name",       // optional
+         country: "United States",       // full country name
+         flag:    "🇺🇸",                  // emoji flag
+         stars:   5                       // optional, 1–5 (defaults to 5)
+       }
+       Country pills + counts are built automatically from this list.
+       ============================================================ */
+    const REVIEWS = [
+      // 🇺🇸 United States (10 reviews from main screenshot)
+      {
+        title: "An amazing app for kids to draw in",
+        desc: "Easy to use and understand for kids – Lots of coloring patterns to help kids learn about things in life, animals, plants, etc. Free your parents and boost your kids' cognitive skills – highly recommended for families with young kids.",
+        name: "UanzImp",
+        country: "United States",
+        flag: "🇺🇸",
+        stars: 5
+      },
+      {
+        title: "Nice Drawing App for Kids",
+        desc: "My child enjoys choosing different pictures and coloring them in. The app is simple to use, and the drawing tools are easy to understand. It's a nice way to keep kids entertained for a while.",
+        name: "U**ii",
+        country: "United States",
+        flag: "🇺🇸",
+        stars: 5
+      },
+      {
+        title: "Super easy learning for kids",
+        desc: "This coloring app can actually work as worksheets. With 200+ images ranging from numbers, alphabets, animals, fruits etc. Children will learn happily and easily while having fun!",
+        name: "Just8x8y8z",
+        country: "United States",
+        flag: "🇺🇸",
+        stars: 5
+      },
+      {
+        title: "Really nice drawing app",
+        desc: "I caught my self drawing with kids. Really beautiful and kids friendly UI. Just one feedback: I would like to drag photo when I color details while zoomed.",
+        name: "DDSDeveloper",
+        country: "United States",
+        flag: "🇺🇸",
+        stars: 5
+      },
+      {
+        title: "My kid loves it!",
+        desc: "He spends atleast 2 hours each day coloring pictures, its a great app to help kids practice coloring as you can recolor if you make mistakes in same screen!",
+        name: "AvadaKedavra12",
+        country: "United States",
+        flag: "🇺🇸",
+        stars: 5
+      },
+      {
+        title: "Very creative app",
+        desc: "Many cute animals. You could actually get creative about coloring. This could be lots of fun for kids.",
+        name: "Wood1016",
+        country: "United States",
+        flag: "🇺🇸",
+        stars: 5
+      },
+      // 🇮🇳 India
+      {
+        title: "Best whiteboard for Kids",
+        desc: "My kids love the App",
+        name: "Mikejohn511",
+        country: "India",
+        flag: "🇮🇳",
+        stars: 5
+      },
+      // 🇨🇦 Canada
+      {
+        title: "Great Drawing App for Kids",
+        desc: "Simple, fun, and easy to use! The app has lots of colors and drawing tools that make sketching enjoyable for kids and beginners. The interface is clean, and the whiteboard feature works smoothly. Great for creativity, doodling, and more.",
+        name: "Tuckit2026",
+        country: "Canada",
+        flag: "🇨🇦",
+        stars: 5
+      },
+      {
+        title: "Easy to use!",
+        desc: "I love the clean interface, it takes you straight to the point. Fun app for anyone to scribble down their imagination. Love it!",
+        name: "thinkerman1",
+        country: "Canada",
+        flag: "🇨🇦",
+        stars: 5
+      },
+      // 🇳🇱 Netherlands
+      {
+        title: "Nice app for kids",
+        desc: "Easy to use and i liked the tools",
+        name: "NexusUA",
+        country: "Netherlands",
+        flag: "🇳🇱",
+        stars: 5
+      },
+      {
+        title: "Fun app to play for my kids",
+        desc: "My kids love the app to color the animals. Love how creative they get while coloring. Highly recommended!",
+        name: "nilmadhab1994",
+        country: "Netherlands",
+        flag: "🇳🇱",
+        stars: 5
+      },
+      // 🇩🇪 Germany
+      {
+        title: "Great for Toddlers",
+        desc: "My 3-year-old daughter absolutely loves this coloring app! It is so easy for her to use and keeps her entertained for hours.",
+        name: "Fbechstein",
+        country: "Germany",
+        flag: "🇩🇪",
+        stars: 5
+      },
+      {
+        title: "Great App",
+        desc: "My daughter loves this app, very intuitive and fun to paint. Strong recommendation!",
+        name: "Stefan1231",
+        country: "Germany",
+        flag: "🇩🇪",
+        stars: 5
+      },
+      // 🇨🇳 China
+      {
+        title: "孩子超喜欢，终于找到宝藏画板！",
+        desc: "孩子自从用了这个画板App，再也不在纸上乱涂乱画了。界面非常简洁可爱，按钮很大，小朋友一学就会。画笔颜色和图案都很丰富，还有自动填色和魔法填功能，孩子能安静画半小时，最满意的是没有乱七八糟的广告，也不会乱弹付费。",
+        name: "Young lady danger",
+        country: "China",
+        flag: "🇨🇳",
+        stars: 5
+      }
+    ];
+
+    (() => {
+      const pillsEl = document.getElementById('countryPills');
+      const gridEl = document.getElementById('reviewsGrid');
+      if (!pillsEl || !gridEl) return;
+
+      const ACCENTS = ['var(--red)', 'var(--blue)', 'var(--green)', 'var(--purple)', 'var(--orange)', 'var(--pink)', 'var(--teal)'];
+      const escapeHTML = s => String(s == null ? '' : s).replace(/[&<>"']/g, c =>
+        ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+      const starRow = n => '⭐'.repeat(Math.max(0, Math.min(5, Math.round(n || 5))));
+
+      // group counts by country (key on name so different flags don't split a country)
+      const counts = new Map(); // country -> { flag, count }
+      REVIEWS.forEach(r => {
+        const key = r.country || 'Other';
+        const entry = counts.get(key) || { flag: r.flag || '🌍', count: 0 };
+        entry.count++;
+        counts.set(key, entry);
+      });
+
+      // build filter pills: "All" first, then each country
+      const pillData = [{ country: 'all', flag: '🌈', label: 'All', count: REVIEWS.length }];
+      counts.forEach((v, country) => pillData.push({ country, flag: v.flag, label: country, count: v.count }));
+
+      pillsEl.innerHTML = pillData.map((p, i) => `
+        <button class="country-pill${i === 0 ? ' active' : ''}" data-country="${escapeHTML(p.country)}">
+          <span class="flag">${escapeHTML(p.flag)}</span>
+          <span class="pill-label">${escapeHTML(p.label)}</span>
+          <span class="pill-count">${p.count}</span>
+        </button>`).join('');
+
+      function render(filter) {
+        const list = filter === 'all' ? REVIEWS : REVIEWS.filter(r => (r.country || 'Other') === filter);
+        if (!list.length) {
+          gridEl.innerHTML = `<p class="reviews-empty">No reviews here yet — check back soon! 🎨</p>`;
+          return;
+        }
+        gridEl.innerHTML = list.map((r, i) => `
+          <article class="review-card reveal" style="--accent:${ACCENTS[i % ACCENTS.length]}">
+            <span class="quote-mark" aria-hidden="true">”</span>
+            <div class="review-stars" aria-label="${Math.round(r.stars || 5)} out of 5 stars">${starRow(r.stars)}</div>
+            <h3>${escapeHTML(r.title)}</h3>
+            <p class="review-desc">${escapeHTML(r.desc)}</p>
+            <div class="review-author">
+              <span class="flag" aria-hidden="true">${escapeHTML(r.flag || '🌍')}</span>
+              <span class="who">
+                ${r.name ? `<span class="name">${escapeHTML(r.name)}</span>` : ''}
+                <span class="country">${escapeHTML(r.country || 'Worldwide')}</span>
+              </span>
+            </div>
+          </article>`).join('');
+        // re-trigger reveal animation for freshly rendered cards
+        gridEl.querySelectorAll('.reveal').forEach(el => { el.classList.add('in'); });
+      }
+
+      pillsEl.addEventListener('click', e => {
+        const btn = e.target.closest('.country-pill');
+        if (!btn) return;
+        pillsEl.querySelectorAll('.country-pill').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        render(btn.dataset.country);
+      });
+
+      render('all');
     })();
   </script>
 </body>
