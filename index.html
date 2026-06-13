@@ -493,15 +493,16 @@
     .phone {
       --w: min(480px, 100%);
       width: var(--w);
-      aspect-ratio: 19.2/9;
-      border-radius: 44px;
-      background: var(--ink);
-      border: 4px solid var(--ink);
-      box-shadow:
-        inset 0 0 0 4px #4a4168,
-        0 30px 60px rgba(43, 35, 68, .32);
-      padding: 12px;
+      aspect-ratio: 19.5/9;
+      border-radius: 46px;
+      /* brushed-titanium side rail */
+      background:
+        linear-gradient(135deg, #6f6f7a 0%, #1b1b21 27%, #4c4c57 50%, #15151a 76%, #5d5d68 100%);
+      padding: 7px;
       position: relative;
+      box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, .22),
+        0 26px 55px rgba(43, 35, 68, .34);
       rotate: 3deg;
       animation: phoneFloat 6s ease-in-out infinite;
     }
@@ -520,27 +521,30 @@
       }
     }
 
+    /* Dynamic Island — landscape, on the left edge of the screen */
     .phone::after {
       content: "";
       position: absolute;
       top: 50%;
-      left: 24px;
+      left: 16px;
       translate: 0 -50%;
-      width: 22px;
-      height: 32%;
+      width: 15px;
+      height: 30%;
       border-radius: 999px;
-      background: var(--ink);
-      box-shadow: inset 0 0 0 2px #4a4168;
-      z-index: 3;
+      background: #000;
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, .55);
+      z-index: 5;
     }
 
     .phone-screen {
       width: 100%;
       height: 100%;
-      border-radius: 32px;
+      border-radius: 39px;
       overflow: hidden;
       position: relative;
-      background: linear-gradient(160deg, #FFF7E6, #FFE9F0 45%, #E6F2FF);
+      border: 5px solid #000;
+      /* thin black bezel + black glass */
+      background: #000;
     }
 
     .phone-screen img {
@@ -553,42 +557,48 @@
     .tablet {
       width: min(560px, 100%);
       aspect-ratio: 4/3;
-      border-radius: 42px;
-      background: var(--ink);
-      border: 4px solid var(--ink);
-      box-shadow:
-        inset 0 0 0 4px #4a4168,
-        0 30px 60px rgba(43, 35, 68, .32);
-      padding: 18px;
+      border-radius: 32px;
+      /* brushed-titanium iPad rail */
+      background:
+        linear-gradient(135deg, #6f6f7a 0%, #1b1b21 27%, #4c4c57 50%, #15151a 76%, #5d5d68 100%);
+      padding: 9px;
       position: relative;
+      box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, .2),
+        0 28px 58px rgba(43, 35, 68, .32);
     }
 
+    /* iPad front camera — landscape, centered on the left bezel */
     .tablet::after {
       content: "";
       position: absolute;
       top: 50%;
-      left: 9px;
+      left: 16px;
       translate: 0 -50%;
       width: 7px;
       height: 7px;
       border-radius: 50%;
-      background: #4a4168;
-      z-index: 3;
+      background: #0a0a0a;
+      box-shadow: inset 0 0 0 1.5px #2b2b33, 0 0 2px rgba(255, 255, 255, .3);
+      z-index: 5;
     }
 
     .tablet-screen {
       width: 100%;
       height: 100%;
-      border-radius: 26px;
+      border-radius: 20px;
       overflow: hidden;
       position: relative;
-      background: linear-gradient(160deg, #FFF7E6, #FFE9F0 45%, #E6F2FF);
+      /* uniform black iPad bezel + black glass */
+      border: 10px solid #000;
+      background: #000;
     }
 
     .tablet-screen img {
       width: 100%;
       height: 100%;
-      object-fit: cover
+      object-fit: contain;
+      object-position: center
     }
 
     /* hero: iPad behind, iPhone in front — same app on both! */
@@ -640,6 +650,7 @@
       gap: .4rem;
       text-align: center;
       padding: .9rem 2.6rem;
+      background: linear-gradient(160deg, #FFF7E6, #FFE9F0 45%, #E6F2FF);
     }
 
     .screen-placeholder .frame-emoji {
@@ -1951,26 +1962,28 @@
 
       .phone {
         --w: min(92vw, 420px);
-        border-radius: 34px;
-        padding: 9px;
+        border-radius: 38px;
+        padding: 6px;
       }
 
       .phone-screen {
-        border-radius: 26px
+        border-radius: 32px;
+        border-width: 4px
       }
 
       .phone::after {
-        left: 16px;
-        width: 16px
+        left: 13px;
+        width: 12px
       }
 
       .tablet {
-        border-radius: 32px;
-        padding: 12px;
+        border-radius: 26px;
+        padding: 7px;
       }
 
       .tablet-screen {
-        border-radius: 22px
+        border-radius: 16px;
+        border-width: 8px
       }
 
       .hero-stage .tablet {
@@ -2042,6 +2055,7 @@
       <a href="#tools">Tools</a>
       <a href="#categories">Categories</a>
       <a href="#screens">Screens</a>
+      <a href="#languages">Languages</a>
       <a href="#play">Try it!</a>
       <a href="#reviews">Reviews</a>
       <a href="#parents">For Parents</a>
@@ -2134,9 +2148,9 @@
 
       <div class="hero-stage">
         <div class="float-sticker s1">🖍️</div>
-        <div class="float-sticker s2">🦄</div>
-        <div class="float-sticker s3">🚀</div>
-        <div class="float-sticker s4">🐳</div>
+        <div class="float-sticker s2">🎨</div>
+        <div class="float-sticker s3">🧸</div>
+        <div class="float-sticker s4">🌈</div>
         <!-- 📸 iPad mockup — drop an iPad screenshot as images/ipad-hero.png (falls back to images/hero.png, same app on both!) -->
         <div class="tablet">
           <div class="tablet-screen">
@@ -2343,6 +2357,20 @@
         </div>
         <figcaption>Same Magic on iPad<small>A bigger canvas for bigger art · 📲 iPad</small></figcaption>
       </figure>
+      <figure class="shot reveal d4">
+        <div class="tablet">
+          <div class="tablet-screen">
+            <div class="screen-placeholder"><span class="frame-emoji">📲</span><strong>iPad coloring</strong>
+              <div class="mini-canvas"></div><em>images/ipad-2.png</em>
+            </div>
+            <!-- 📸 Drop an iPad screenshot as images/ipad-2.png (falls back to the iPhone shot — same app on both!) -->
+            <img src="images/ipad-2.png" alt="Whiteboard Kids on iPad — coloring screen"
+              style="position:absolute;inset:0"
+              onerror="if(!this.dataset.fb){this.dataset.fb=1;this.src='images/screen-2.png'}else{this.remove()}" />
+          </div>
+        </div>
+        <figcaption>Coloring on iPad<small>More room for little artists · 📲 iPad</small></figcaption>
+      </figure>
       <figure class="shot reveal d2">
         <div class="phone">
           <div class="phone-screen">
@@ -2366,20 +2394,6 @@
           </div>
         </div>
         <figcaption>Rainbow Palette<small>Every color a kid could want · 📱 iPhone</small></figcaption>
-      </figure>
-      <figure class="shot reveal d4">
-        <div class="tablet">
-          <div class="tablet-screen">
-            <div class="screen-placeholder"><span class="frame-emoji">📲</span><strong>iPad coloring</strong>
-              <div class="mini-canvas"></div><em>images/ipad-2.png</em>
-            </div>
-            <!-- 📸 Drop an iPad screenshot as images/ipad-2.png (falls back to the iPhone shot — same app on both!) -->
-            <img src="images/ipad-2.png" alt="Whiteboard Kids on iPad — coloring screen"
-              style="position:absolute;inset:0"
-              onerror="if(!this.dataset.fb){this.dataset.fb=1;this.src='images/screen-2.png'}else{this.remove()}" />
-          </div>
-        </div>
-        <figcaption>Coloring on iPad<small>More room for little artists · 📲 iPad</small></figcaption>
       </figure>
     </div>
     <p class="rail-hint"><span class="arrowL">⬅️</span> swipe to explore — iPhone &amp; iPad <span
@@ -2700,6 +2714,115 @@
             <p>Crafted for iPhone and iPad — smooth, responsive drawing that feels great under tiny fingertips.</p>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== LANGUAGES ====================== -->
+  <style>
+    .langs {
+      padding: 3rem 0 3.5rem;
+    }
+    .langs .lang-sub {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      margin: 1rem auto 0;
+      font-weight: 900;
+      color: var(--ink);
+      background: var(--yellow);
+      border: 2.5px solid var(--ink);
+      padding: .45rem 1.1rem;
+      border-radius: 999px;
+      box-shadow: 0 4px 0 rgba(43, 35, 68, .18);
+      rotate: -1.5deg;
+    }
+    .lang-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2.2rem;
+    }
+    .lang-pill {
+      display: flex;
+      align-items: center;
+      gap: .85rem;
+      background: #fff;
+      border: 3px solid var(--ink);
+      border-radius: 22px;
+      padding: .75rem 1.15rem .75rem .8rem;
+      box-shadow: 0 6px 0 rgba(43, 35, 68, .14);
+      transition: translate .22s, box-shadow .22s, rotate .22s;
+      cursor: default;
+    }
+    .lang-pill:hover {
+      translate: 0 -6px;
+      rotate: -1.5deg;
+      box-shadow: 0 12px 0 rgba(43, 35, 68, .12);
+    }
+    .lang-flag {
+      width: 46px;
+      height: 46px;
+      flex: none;
+      display: grid;
+      place-items: center;
+      font-size: 1.6rem;
+      line-height: 1;
+      border-radius: 14px;
+      border: 2.5px solid var(--ink);
+      background: var(--lc, var(--blue));
+    }
+    .lang-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
+      text-align: left;
+    }
+    .lang-native {
+      font-weight: 800;
+      font-size: 1.05rem;
+      color: var(--ink);
+    }
+    .lang-en {
+      font-weight: 700;
+      font-size: .72rem;
+      letter-spacing: .04em;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+    }
+    .lang-pill.more {
+      background: var(--ink);
+      color: #fff;
+      font-weight: 900;
+      font-size: 1.05rem;
+      padding: 0 1.4rem;
+    }
+    @media (max-width: 640px) {
+      .lang-flag { width: 40px; height: 40px; font-size: 1.4rem; }
+      .lang-native { font-size: .95rem; }
+    }
+  </style>
+  <section class="langs" id="languages">
+    <div class="container">
+      <div class="section-head centered reveal">
+        <span class="kicker k-blue">Speaks Their Language</span>
+        <h2>Color in your language 🗣️</h2>
+        <p>Whiteboard Kids speaks <strong>10 languages</strong> — so little artists everywhere feel right at home, from
+          buttons to menus, in the words they know best. Plus, it's a playful way for kids to explore a new language.</p>
+        <span class="lang-sub">🌍 10 languages — and growing!</span>
+      </div>
+      <div class="lang-grid reveal">
+        <div class="lang-pill" style="--lc:var(--blue)"><span class="lang-flag">🇬🇧</span><span class="lang-text"><span class="lang-native">English</span><span class="lang-en">English</span></span></div>
+        <div class="lang-pill" style="--lc:var(--green)"><span class="lang-flag">🇸🇦</span><span class="lang-text"><span class="lang-native">العربية</span><span class="lang-en">Arabic</span></span></div>
+        <div class="lang-pill" style="--lc:var(--red)"><span class="lang-flag">🇨🇳</span><span class="lang-text"><span class="lang-native">中文</span><span class="lang-en">Chinese</span></span></div>
+        <div class="lang-pill" style="--lc:var(--orange)"><span class="lang-flag">🇳🇱</span><span class="lang-text"><span class="lang-native">Nederlands</span><span class="lang-en">Dutch</span></span></div>
+        <div class="lang-pill" style="--lc:var(--yellow)"><span class="lang-flag">🇩🇪</span><span class="lang-text"><span class="lang-native">Deutsch</span><span class="lang-en">German</span></span></div>
+        <div class="lang-pill" style="--lc:var(--purple)"><span class="lang-flag">🇮🇳</span><span class="lang-text"><span class="lang-native">ગુજરાતી</span><span class="lang-en">Gujarati</span></span></div>
+        <div class="lang-pill" style="--lc:var(--pink)"><span class="lang-flag">🇮🇳</span><span class="lang-text"><span class="lang-native">हिन्दी</span><span class="lang-en">Hindi</span></span></div>
+        <div class="lang-pill" style="--lc:var(--green)"><span class="lang-flag">🇮🇹</span><span class="lang-text"><span class="lang-native">Italiano</span><span class="lang-en">Italian</span></span></div>
+        <div class="lang-pill" style="--lc:var(--blue)"><span class="lang-flag">🇯🇵</span><span class="lang-text"><span class="lang-native">日本語</span><span class="lang-en">Japanese</span></span></div>
+        <div class="lang-pill" style="--lc:var(--orange)"><span class="lang-flag">🇪🇸</span><span class="lang-text"><span class="lang-native">Español</span><span class="lang-en">Spanish</span></span></div>
       </div>
     </div>
   </section>
