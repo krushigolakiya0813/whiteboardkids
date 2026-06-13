@@ -44,14 +44,15 @@
     }
 
     html {
-      scroll-behavior: smooth
+      scroll-behavior: smooth;
+      overflow-x: clip;
     }
 
     body {
       font-family: var(--font-body);
       background: var(--paper);
       color: var(--ink);
-      overflow-x: hidden;
+      overflow-x: clip;
       background-image:
         radial-gradient(rgba(43, 35, 68, .045) 1.2px, transparent 1.2px);
       background-size: 26px 26px;
@@ -225,6 +226,7 @@
       border-radius: 999px;
       padding: .6rem 1.3rem;
       cursor: pointer;
+      white-space: nowrap;
       transition: translate .15s, box-shadow .15s;
       box-shadow: 0 5px 0 var(--ink);
       background: var(--yellow);
@@ -1847,7 +1849,8 @@
 
     .foot-links {
       display: flex;
-      gap: 1.6rem;
+      flex-wrap: wrap;
+      gap: .9rem 1.6rem;
       font-weight: 800;
       font-size: .92rem
     }
@@ -1958,6 +1961,64 @@
     @media (max-width:560px) {
       .tools-grid {
         grid-template-columns: 1fr
+      }
+
+      /* tighten the nav so the logo + button never collide */
+      nav {
+        padding: .5rem .6rem .5rem .85rem;
+        gap: .5rem;
+      }
+
+      .logo {
+        font-size: 1.05rem;
+        gap: .45rem;
+        min-width: 0;
+      }
+
+      .logo-mark img {
+        width: 32px !important;
+        height: 32px !important;
+      }
+
+      .logo small {
+        font-size: .55rem;
+      }
+
+      .btn.btn-dark {
+        padding: .5rem .85rem;
+        font-size: .92rem;
+      }
+
+      /* footer: stack & center, let links wrap neatly */
+      .foot-grid {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .foot-links {
+        justify-content: center;
+        gap: .7rem 1.1rem;
+      }
+
+      .foot-bottom {
+        justify-content: center;
+        text-align: center;
+      }
+
+      /* hero badge: drop the redundant device part so it stays one tidy line */
+      .hero-badge {
+        font-size: .74rem;
+        padding: .42rem .95rem;
+        letter-spacing: .03em;
+        white-space: nowrap;
+      }
+
+      .hero-badge .dot {
+        flex: none;
+      }
+
+      .badge-extra {
+        display: none;
       }
 
       .phone {
@@ -2108,7 +2169,7 @@
 
     <div class="container hero-inner">
       <div>
-        <span class="hero-badge"><span class="dot"></span> NOW ON THE APP STORE — iPhone &amp; iPad&nbsp;&nbsp;🍎</span>
+        <span class="hero-badge"><span class="dot"></span> NOW ON THE APP STORE<span class="badge-extra"> — iPhone &amp; iPad</span>&nbsp;&nbsp;🍎</span>
         <h1>
           Where little hands<br />
           make <span class="crayon">big&nbsp;art<svg viewBox="0 0 300 40" preserveAspectRatio="none">
