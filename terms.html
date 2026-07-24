@@ -502,8 +502,46 @@
     }
 
     @media (max-width: 720px) {
+      nav {
+        padding: .5rem .6rem .5rem .85rem;
+        gap: .5rem;
+      }
+
       nav .logo small {
         display: none
+      }
+
+      .logo {
+        font-size: 1.02rem;
+        gap: .45rem;
+        min-width: 0;
+      }
+
+      .logo>span:last-child {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .logo-mark,
+      .logo-mark img {
+        width: 32px !important;
+        height: 32px !important;
+        border-radius: 9px !important;
+      }
+
+      .btn.btn-dark {
+        padding: .45rem .8rem;
+        font-size: .88rem;
+        flex: none;
+      }
+
+      .policy-hero {
+        padding: 7.5rem 0 2.4rem;
+      }
+
+      .policy-hero p.lede {
+        font-size: 1.02rem;
       }
 
       .policy-card {
