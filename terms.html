@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Use-Whiteboard Kids Drawing & Color Fill Game</title>
+  <meta name="description"
+    content="The Whiteboard Kids terms of use. Simple, family-friendly terms for using our kids drawing and coloring app." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&display=swap"
+    rel="stylesheet" />
+  <style>
+    :root {
+      --paper: #FFF9EF;
+      --paper-2: #FFF3DD;
+      --ink: #2B2344;
+      --ink-soft: #5C5478;
+      --red: #FF5C77;
+      --orange: #FF9F43;
+      --yellow: #FFD93D;
+      --green: #5BCB77;
+      --blue: #4D96FF;
+      --purple: #9B5DE5;
+      --pink: #FF8FAB;
+      --teal: #2EC4B6;
+      --white: #FFFFFF;
+      --shadow-sticker: 0 10px 0 rgba(43, 35, 68, .12);
+      --shadow-pop: 0 18px 40px rgba(43, 35, 68, .16);
+      --font-display: "Fredoka", system-ui, sans-serif;
+      --font-body: "Nunito", system-ui, sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: clip;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--paper);
+      color: var(--ink);
+      overflow-x: clip;
+      background-image: radial-gradient(rgba(43, 35, 68, .045) 1.2px, transparent 1.2px);
+      background-size: 26px 26px;
+    }
+
+    ::selection {
+      background: var(--yellow);
+      color: var(--ink)
+    }
+
+    img {
+      max-width: 100%;
+      display: block
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: var(--font-display)
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin-inline: auto
+    }
+
+    .rainbow-strip {
+      height: 8px;
+      width: 100%;
+      background: linear-gradient(90deg, var(--red), var(--orange), var(--yellow), var(--green), var(--blue), var(--purple), var(--pink), var(--red));
+      background-size: 300% 100%;
+      animation: rainbowSlide 8s linear infinite;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    @keyframes rainbowSlide {
+      to {
+        background-position: 300% 0
+      }
+    }
+
+    /* ---------- nav ---------- */
+    nav {
+      position: fixed;
+      top: 22px;
+      left: 50%;
+      translate: -50% 0;
+      z-index: 999;
+      width: min(1100px, 94%);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: .65rem 1.1rem .65rem 1.25rem;
+      background: rgba(255, 255, 255, .82);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 3px solid var(--ink);
+      border-radius: 999px;
+      box-shadow: 0 6px 0 rgba(43, 35, 68, .18);
+      transition: box-shadow .3s, translate .3s;
+    }
+
+    nav.scrolled {
+      box-shadow: 0 3px 0 rgba(43, 35, 68, .18);
+      translate: -50% -4px
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.25rem;
+      letter-spacing: .2px
+    }
+
+    .logo-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      flex: 0 0 auto;
+      background: conic-gradient(from 210deg, var(--red), var(--orange), var(--yellow), var(--green), var(--blue), var(--purple), var(--red));
+      display: grid;
+      place-items: center;
+      border: 3px solid var(--ink);
+      animation: logoWiggle 5s ease-in-out infinite;
+      overflow: hidden;
+    }
+
+    @keyframes logoWiggle {
+
+      0%,
+      100% {
+        rotate: -4deg
+      }
+
+      50% {
+        rotate: 6deg
+      }
+    }
+
+    .logo small {
+      display: block;
+      font-family: var(--font-body);
+      font-weight: 800;
+      font-size: .6rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--ink-soft)
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .55rem;
+      font-family: var(--font-display);
+      font-weight: 600;
+      border: 3px solid var(--ink);
+      border-radius: 999px;
+      padding: .6rem 1.3rem;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: translate .15s, box-shadow .15s;
+      box-shadow: 0 5px 0 var(--ink);
+      background: var(--yellow);
+      color: var(--ink);
+    }
+
+    .btn:hover {
+      translate: 0 -3px;
+      box-shadow: 0 8px 0 var(--ink)
+    }
+
+    .btn:active {
+      translate: 0 2px;
+      box-shadow: 0 2px 0 var(--ink)
+    }
+
+    .btn.btn-dark {
+      background: var(--ink);
+      color: #fff;
+      box-shadow: 0 5px 0 rgba(43, 35, 68, .35)
+    }
+
+    .btn.btn-dark:hover {
+      box-shadow: 0 8px 0 rgba(43, 35, 68, .35)
+    }
+
+    /* ---------- hero ---------- */
+    .policy-hero {
+      position: relative;
+      padding: 9.5rem 0 3rem;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .policy-hero .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(60px);
+      opacity: .32;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .policy-hero .blob.b1 {
+      width: 420px;
+      height: 420px;
+      background: var(--blue);
+      top: -120px;
+      left: -120px
+    }
+
+    .policy-hero .blob.b2 {
+      width: 380px;
+      height: 380px;
+      background: var(--green);
+      top: -80px;
+      right: -100px
+    }
+
+    .policy-hero .inner {
+      position: relative;
+      z-index: 2
+    }
+
+    .kicker {
+      display: inline-block;
+      font-weight: 900;
+      font-size: .8rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: #fff;
+      background: var(--blue);
+      border: 2.5px solid var(--ink);
+      padding: .4rem 1rem;
+      border-radius: 999px;
+      rotate: -2deg;
+      box-shadow: 0 4px 0 rgba(43, 35, 68, .18);
+      margin-bottom: 1.1rem;
+    }
+
+    .policy-hero h1 {
+      font-size: clamp(2.4rem, 5.4vw, 4rem);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -.5px;
+    }
+
+    .policy-hero h1 .hl {
+      color: var(--blue)
+    }
+
+    .policy-hero p.lede {
+      margin: 1.4rem auto 0;
+      max-width: 38rem;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--ink-soft);
+      line-height: 1.7;
+    }
+
+    .policy-hero .updated {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      margin-top: 1.6rem;
+      font-weight: 900;
+      font-size: .85rem;
+      background: var(--yellow);
+      border: 2.5px solid var(--ink);
+      padding: .45rem 1.1rem;
+      border-radius: 999px;
+      box-shadow: 0 4px 0 rgba(43, 35, 68, .18);
+      rotate: -1.5deg;
+    }
+
+    /* ---------- policy body ---------- */
+    .policy {
+      padding: 1rem 0 4rem;
+    }
+
+    .policy-grid {
+      display: grid;
+      gap: 1.6rem;
+    }
+
+    .policy-card {
+      background: #fff;
+      border: 3px solid var(--ink);
+      border-radius: 30px;
+      padding: 2rem 2rem 2.1rem;
+      box-shadow: var(--shadow-sticker);
+      position: relative;
+      transition: translate .2s, rotate .2s;
+    }
+
+    .policy-card:hover {
+      translate: 0 -5px;
+      rotate: -.4deg;
+    }
+
+    .policy-card .head {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .policy-card .p-icon {
+      flex: 0 0 auto;
+      width: 58px;
+      height: 58px;
+      border-radius: 20px;
+      font-size: 1.7rem;
+      display: grid;
+      place-items: center;
+      border: 3px solid var(--ink);
+      background: var(--pc, var(--yellow));
+      rotate: -4deg;
+    }
+
+    .policy-card h2 {
+      font-size: clamp(1.4rem, 2.6vw, 1.8rem);
+      font-weight: 600;
+      line-height: 1.15;
+    }
+
+    .policy-card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 1.3rem 0 .5rem;
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+
+    .policy-card p {
+      font-weight: 700;
+      color: var(--ink-soft);
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    .policy-card p+p {
+      margin-top: .85rem;
+    }
+
+    .policy-card a {
+      color: var(--purple);
+      font-weight: 900;
+      text-decoration: underline;
+      text-decoration-color: var(--yellow);
+      text-decoration-thickness: 3px;
+      text-underline-offset: 3px;
+    }
+
+    .callout {
+      display: flex;
+      align-items: flex-start;
+      gap: .9rem;
+      margin-top: 1.2rem;
+      padding: 1.1rem 1.2rem;
+      border: 3px dashed var(--ink);
+      border-radius: 22px;
+      background: var(--paper-2);
+      font-weight: 800;
+      color: var(--ink);
+      line-height: 1.55;
+    }
+
+    .callout .big {
+      font-size: 1.5rem;
+      line-height: 1;
+      flex: 0 0 auto;
+    }
+
+    .tick-list {
+      list-style: none;
+      margin-top: 1rem;
+      display: grid;
+      gap: .65rem;
+    }
+
+    .tick-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: .65rem;
+      font-weight: 700;
+      color: var(--ink-soft);
+      line-height: 1.6;
+    }
+
+    .tick-list li::before {
+      content: "✅";
+      flex: 0 0 auto;
+      font-size: 1rem;
+      line-height: 1.45;
+    }
+
+    .tick-list.no li::before {
+      content: "🚫";
+    }
+
+    .policy-card.contact {
+      background:
+        radial-gradient(circle at 12% 20%, rgba(255, 217, 61, .35), transparent 40%),
+        radial-gradient(circle at 88% 30%, rgba(255, 143, 171, .35), transparent 40%),
+        #fff;
+      text-align: center;
+    }
+
+    .policy-card.contact .head {
+      justify-content: center;
+    }
+
+    .contact-email {
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+      margin-top: 1.2rem;
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1.1rem;
+      background: var(--yellow);
+      border: 3px solid var(--ink);
+      border-radius: 999px;
+      padding: .7rem 1.4rem;
+      box-shadow: 0 5px 0 var(--ink);
+      color: var(--ink) !important;
+      text-decoration: none !important;
+      transition: translate .15s, box-shadow .15s;
+    }
+
+    .contact-email:hover {
+      translate: 0 -3px;
+      box-shadow: 0 8px 0 var(--ink);
+    }
+
+    /* ---------- footer ---------- */
+    footer {
+      background: var(--ink);
+      color: #BDB6D6;
+      padding: 3.4rem 0 2.2rem;
+      border-top: 8px solid transparent;
+      border-image: linear-gradient(90deg, var(--red), var(--orange), var(--yellow), var(--green), var(--blue), var(--purple)) 1;
+    }
+
+    .foot-grid {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap
+    }
+
+    .foot-grid .logo {
+      color: #fff
+    }
+
+    .foot-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .9rem 1.6rem;
+      font-weight: 800;
+      font-size: .92rem
+    }
+
+    .foot-links a:hover {
+      color: var(--yellow)
+    }
+
+    .foot-bottom {
+      margin-top: 2.4rem;
+      padding-top: 1.6rem;
+      border-top: 1px solid rgba(255, 255, 255, .12);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: .6rem;
+      font-weight: 700;
+      font-size: .85rem;
+    }
+
+    @media (max-width: 720px) {
+      nav .logo small {
+        display: none
+      }
+
+      .policy-card {
+        padding: 1.5rem 1.4rem 1.6rem
+      }
+
+      .foot-grid {
+        flex-direction: column;
+        text-align: center
+      }
+
+      .foot-links {
+        justify-content: center
+      }
+
+      .foot-bottom {
+        justify-content: center;
+        text-align: center
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="rainbow-strip"></div>
+
+  <!-- ====================== NAV ====================== -->
+  <nav id="nav">
+    <a class="logo" href="index.html">
+      <span class="logo-mark" style="background:none;border:none"><img src="images/icon.png" alt="Whiteboard Kids"
+          style="width:42px;height:42px;border-radius:11px;object-fit:cover"></span>
+      <span><b>Whiteboard&nbsp;Kids</b><small>Draw · Color · Smile</small></span>
+    </a>
+    <a class="btn btn-dark" href="index.html">🏠&nbsp; Back home</a>
+  </nav>
+
+  <!-- ====================== HERO ====================== -->
+  <header class="policy-hero">
+    <span class="blob b1"></span>
+    <span class="blob b2"></span>
+    <div class="container inner">
+      <span class="kicker">📜 The Friendly Fine Print</span>
+      <h1>Terms of <span class="hl">Use</span> ✍️</h1>
+      <p class="lede">The simple, grown-up-friendly rules for using Whiteboard Kids-Kids Drawing &amp; Color Fill
+        Game. By downloading or using the app, you agree to these terms.</p>
+      <span class="updated">📅 Last updated: July 24, 2026</span>
+    </div>
+  </header>
+
+  <!-- ====================== TERMS BODY ====================== -->
+  <main class="policy">
+    <div class="container">
+      <div class="policy-grid">
+
+        <!-- Acceptance -->
+        <section class="policy-card" style="--pc:var(--purple)">
+          <div class="head">
+            <span class="p-icon">🤝</span>
+            <h2>Acceptance of Terms</h2>
+          </div>
+          <p>These Terms of Use ("Terms") govern your use of the <b>Whiteboard Kids-Kids Drawing &amp; Color Fill
+              Game</b> app ("the App"). By downloading, installing, or using the App, you agree to be bound by these
+            Terms. If you do not agree, please do not use the App.</p>
+          <div class="callout">
+            <span class="big">👨‍👩‍👧</span>
+            <span>The App is designed for children, but these Terms are an agreement with the <b>parent or legal
+                guardian</b>. If you're under 18, please make sure a grown-up has read and agreed to these Terms.</span>
+          </div>
+        </section>
+
+        <!-- License -->
+        <section class="policy-card" style="--pc:var(--green)">
+          <div class="head">
+            <span class="p-icon">🎟️</span>
+            <h2>License to Use the App</h2>
+          </div>
+          <p>We grant you a personal, limited, non-exclusive, non-transferable, revocable license to use the App on
+            Apple devices that you own or control, for personal, non-commercial use, in accordance with these Terms and
+            Apple's App Store terms.</p>
+          <ul class="tick-list">
+            <li>Use the App for personal, family fun and learning.</li>
+            <li>Draw, color, and save your child's creations for personal use.</li>
+            <li>Share your little artist's masterpieces with family and friends.</li>
+          </ul>
+        </section>
+
+        <!-- Restrictions -->
+        <section class="policy-card" style="--pc:var(--red)">
+          <div class="head">
+            <span class="p-icon">🚦</span>
+            <h2>What's Not Allowed</h2>
+          </div>
+          <p>To keep the App safe and fun for everyone, you agree <b>not</b> to:</p>
+          <ul class="tick-list no">
+            <li>Copy, modify, distribute, sell, or lease any part of the App or its content.</li>
+            <li>Reverse-engineer, decompile, or attempt to extract the App's source code.</li>
+            <li>Use the App's artwork, coloring pages, or other content for commercial purposes.</li>
+            <li>Use the App in any way that violates applicable laws or regulations.</li>
+          </ul>
+        </section>
+
+        <!-- Intellectual Property -->
+        <section class="policy-card" style="--pc:var(--yellow)">
+          <div class="head">
+            <span class="p-icon">🎨</span>
+            <h2>Intellectual Property</h2>
+          </div>
+          <p>The App-including its design, artwork, coloring pages, sounds, and code-is owned by us and protected
+            by copyright and other intellectual property laws. All rights not expressly granted to you are reserved.</p>
+          <p>Drawings and colorings your child creates in the App belong to your family-save them, print them, stick
+            them on the fridge! 🖼️</p>
+        </section>
+
+        <!-- Privacy -->
+        <section class="policy-card" style="--pc:var(--pink)">
+          <div class="head">
+            <span class="p-icon">🔒</span>
+            <h2>Privacy &amp; Children</h2>
+          </div>
+          <p>We do not collect personal information from children, and the App shows no third-party advertisements.
+            Please read our <a href="privacy.html">Privacy Policy</a> to learn how we protect your little artist's
+            privacy-it forms part of these Terms.</p>
+        </section>
+
+        <!-- Updates & availability -->
+        <section class="policy-card" style="--pc:var(--blue)">
+          <div class="head">
+            <span class="p-icon">🔄</span>
+            <h2>Updates &amp; Availability</h2>
+          </div>
+          <p>We're always improving the App with new tools, coloring pages, and features. Updates may be provided from
+            time to time, and some features may be added, changed, or removed.</p>
+          <ul class="tick-list">
+            <li>The App is provided "as is" and "as available".</li>
+            <li>We may suspend or discontinue the App (or any part of it) at any time.</li>
+            <li>We recommend keeping the App updated to the latest version for the best experience.</li>
+          </ul>
+        </section>
+
+        <!-- Disclaimer -->
+        <section class="policy-card" style="--pc:var(--orange)">
+          <div class="head">
+            <span class="p-icon">⚖️</span>
+            <h2>Disclaimer &amp; Limitation of Liability</h2>
+          </div>
+          <p>To the maximum extent permitted by law, the App is provided without warranties of any kind, whether
+            express or implied, including warranties of merchantability, fitness for a particular purpose, and
+            non-infringement.</p>
+          <p>To the maximum extent permitted by law, we shall not be liable for any indirect, incidental, special,
+            consequential, or punitive damages arising out of or relating to your use of (or inability to use) the
+            App.</p>
+        </section>
+
+        <!-- Changes -->
+        <section class="policy-card" style="--pc:var(--teal)">
+          <div class="head">
+            <span class="p-icon">📝</span>
+            <h2>Changes to These Terms</h2>
+          </div>
+          <p>We may update these Terms from time to time. When changes are made:</p>
+          <ul class="tick-list">
+            <li>The updated Terms will be posted on this page with a new "Last updated" date.</li>
+            <li>Continued use of the App after changes means you accept the updated Terms.</li>
+          </ul>
+        </section>
+
+        <!-- Contact -->
+        <section class="policy-card contact" style="--pc:var(--yellow)">
+          <div class="head">
+            <span class="p-icon">📨</span>
+            <h2>Contact Us</h2>
+          </div>
+          <p>Questions about these Terms? We're happy to help-reach out any time. 💛</p>
+          <a class="contact-email" href="mailto:krushigolakiya0813@gmail.com">📧 krushigolakiya0813@gmail.com</a>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ====================== FOOTER ====================== -->
+  <footer>
+    <div class="container">
+      <div class="foot-grid">
+        <a class="logo" href="index.html">
+          <span class="logo-mark" style="background:none;border:none"><img src="images/icon.png" alt=""
+              style="width:36px;height:36px;border-radius:10px;object-fit:cover"></span>
+          <span><b style="color:#fff">Whiteboard&nbsp;Kids</b><small style="color:#BDB6D6">Draw · Color ·
+              Smile</small></span>
+        </a>
+        <div class="foot-links">
+          <a href="index.html#tools">Tools</a>
+          <a href="index.html#categories">Categories</a>
+          <a href="index.html#screens">Screens</a>
+          <a href="index.html#reviews">Reviews</a>
+          <a href="index.html#parents">Parents</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms of Use</a>
+          <a href="https://apps.apple.com/in/app/drawing-color-paint-board/id6760696494" target="_blank"
+            rel="noopener">App Store ↗</a>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>© 2026 Whiteboard Kids. All scribbles reserved.</span>
+        <span class="made">Made with 🖍️ for tiny artists everywhere-on iPhone &amp; iPad</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('nav');
+    addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 40), { passive: true });
+  </script>
+</body>
+
+</html>
