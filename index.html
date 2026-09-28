@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Whiteboard Kids</title>
   <meta name="description"
-    content="Whiteboard Kids is a joyful drawing, coloring and paint-fill app for kids with 6+ creative tools and tons of coloring categories. Available on the App Store." />
+    content="Whiteboard Kids is a joyful drawing, coloring and paint-fill app for kids with 6+ creative tools and tons of coloring categories. Available on Google Play." />
   <meta property="og:title" content="Whiteboard Kids-Draw. Color. Giggle. Repeat." />
   <meta property="og:description"
-    content="A magical drawing & color-filling playground for kids. 6+ tools, endless categories. Only on Apple devices." />
+    content="A magical drawing & color-filling playground for kids. 6+ tools, endless categories. Now on Android phones &amp; tablets." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -419,8 +419,8 @@
       flex-wrap: wrap
     }
 
-    /* App Store badge (hand-built) */
-    .appstore-badge {
+    /* Google Play badge (hand-built) */
+    .playstore-badge {
       display: inline-flex;
       align-items: center;
       gap: .8rem;
@@ -433,28 +433,28 @@
       transition: translate .15s, box-shadow .15s;
     }
 
-    .appstore-badge:hover {
+    .playstore-badge:hover {
       translate: 0 -3px;
       box-shadow: 0 9px 0 rgba(43, 35, 68, .3)
     }
 
-    .appstore-badge:active {
+    .playstore-badge:active {
       translate: 0 2px;
       box-shadow: 0 2px 0 rgba(43, 35, 68, .3)
     }
 
-    .appstore-badge svg {
+    .playstore-badge svg {
       width: 30px;
       height: 30px;
       flex: 0 0 auto
     }
 
-    .appstore-badge .txt {
+    .playstore-badge .txt {
       line-height: 1.15;
       text-align: left
     }
 
-    .appstore-badge .txt small {
+    .playstore-badge .txt small {
       display: block;
       font-size: .66rem;
       font-weight: 700;
@@ -462,7 +462,7 @@
       opacity: .8
     }
 
-    .appstore-badge .txt strong {
+    .playstore-badge .txt strong {
       font-family: var(--font-display);
       font-size: 1.18rem;
       font-weight: 600
@@ -523,16 +523,16 @@
       }
     }
 
-    /* Dynamic Island-landscape, on the left edge of the screen */
+    /* punch-hole camera-landscape, on the left edge of the screen */
     .phone::after {
       content: "";
       position: absolute;
       top: 50%;
       left: 16px;
       translate: 0 -50%;
-      width: 15px;
-      height: 30%;
-      border-radius: 999px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
       background: #000;
       box-shadow: 0 0 0 1px rgba(0, 0, 0, .55);
       z-index: 5;
@@ -555,12 +555,12 @@
       object-fit: cover
     }
 
-    /* iPad mockup-landscape, same playful style as the phone */
+    /* tablet mockup-landscape, same playful style as the phone */
     .tablet {
       width: min(560px, 100%);
       aspect-ratio: 4/3;
       border-radius: 32px;
-      /* brushed-titanium iPad rail */
+      /* brushed-titanium tablet rail */
       background:
         linear-gradient(135deg, #6f6f7a 0%, #1b1b21 27%, #4c4c57 50%, #15151a 76%, #5d5d68 100%);
       padding: 9px;
@@ -570,7 +570,7 @@
         0 28px 58px rgba(43, 35, 68, .32);
     }
 
-    /* iPad front camera-landscape, centered on the left bezel */
+    /* tablet front camera-landscape, centered on the left bezel */
     .tablet::after {
       content: "";
       position: absolute;
@@ -591,7 +591,7 @@
       border-radius: 20px;
       overflow: hidden;
       position: relative;
-      /* uniform black iPad bezel + black glass */
+      /* uniform black tablet bezel + black glass */
       border: 10px solid #000;
       background: #000;
     }
@@ -603,7 +603,7 @@
       object-position: center
     }
 
-    /* hero: iPad behind, iPhone in front-same app on both! */
+    /* hero: tablet behind, phone in front-same app on both! */
     .hero-stage .tablet {
       grid-area: 1/1;
       width: min(520px, 96%);
@@ -1805,7 +1805,7 @@
       color: var(--ink-soft)
     }
 
-    .apple-row {
+    .chip-row {
       display: flex;
       justify-content: center;
       gap: 1rem;
@@ -1813,7 +1813,7 @@
       margin-top: 2.2rem
     }
 
-    .apple-chip {
+    .info-chip {
       display: inline-flex;
       align-items: center;
       gap: .5rem;
@@ -2034,7 +2034,8 @@
 
       .phone::after {
         left: 13px;
-        width: 12px
+        width: 10px;
+        height: 10px
       }
 
       .tablet {
@@ -2121,7 +2122,7 @@
       <a href="#reviews">Reviews</a>
       <a href="#parents">For Parents</a>
     </div>
-    <a class="btn btn-dark" href="https://apps.apple.com/in/app/drawing-color-paint-board/id6760696494" target="_blank"
+    <a class="btn btn-dark" href="https://play.google.com/store/apps/details?id=com.whiteboardkids.app" target="_blank"
       rel="noopener">
       Get the App
     </a>
@@ -2169,7 +2170,7 @@
 
     <div class="container hero-inner">
       <div>
-        <span class="hero-badge"><span class="dot"></span> NOW ON THE APP STORE<span class="badge-extra">-iPhone &amp; iPad</span>&nbsp;&nbsp;🍎</span>
+        <span class="hero-badge"><span class="dot"></span> NOW ON GOOGLE PLAY<span class="badge-extra">-Android Phone &amp; Tablet</span>&nbsp;&nbsp;🤖</span>
         <h1>
           Where little hands<br />
           make <span class="crayon">big&nbsp;art<svg viewBox="0 0 300 40" preserveAspectRatio="none">
@@ -2184,23 +2185,25 @@
         <p class="lede">
           <b>Whiteboard Kids</b> is a magical drawing &amp; color-filling playground for kids —
           with <b>6+ creative tools</b>, tons of coloring categories, and zero mess on the carpet.
-          Designed with love for iPhone &amp; iPad.
+          Designed with love for Android phones &amp; tablets.
         </p>
         <div class="hero-ctas">
-          <a class="appstore-badge" href="https://apps.apple.com/in/app/drawing-color-paint-board/id6760696494"
-            target="_blank" rel="noopener" aria-label="Download Whiteboard Kids on the App Store">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path
-                d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.53 4.08zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
+          <a class="playstore-badge" href="https://play.google.com/store/apps/details?id=com.whiteboardkids.app"
+            target="_blank" rel="noopener" aria-label="Get Whiteboard Kids on Google Play">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="#4285F4" d="M1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924z" />
+              <path fill="#34A853" d="M13.544 10.989l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973z" />
+              <path fill="#FBBC04" d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594z" />
+              <path fill="#EA4335" d="M13.544 13.056l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z" />
             </svg>
-            <span class="txt"><small>DOWNLOAD ON THE</small><strong>App Store</strong></span>
+            <span class="txt"><small>GET IT ON</small><strong>Google Play</strong></span>
           </a>
           <a class="btn" href="#play">🎨&nbsp; Doodle right here</a>
         </div>
         <div class="hero-devices">
-          <span class="apple-chip">📱 iPhone</span>
-          <span class="apple-chip">📲 iPad</span>
-          <span class="apple-chip">✨ Same app, both screens</span>
+          <span class="info-chip">📱 Android Phone</span>
+          <span class="info-chip">📲 Android Tablet</span>
+          <span class="info-chip">✨ Same app, both screens</span>
         </div>
         <p class="hero-note" style="margin-top:1.6rem">
           <span class="stars">★★★★★</span> Loved by tiny artists &amp; their grown-ups
@@ -2212,10 +2215,10 @@
         <div class="float-sticker s2">🎨</div>
         <div class="float-sticker s3">🧸</div>
         <div class="float-sticker s4">🌈</div>
-        <!-- 📸 iPad mockup-drop an iPad screenshot as images/ipad-hero.png (falls back to images/hero.png, same app on both!) -->
+        <!-- 📸 Tablet mockup-drop a tablet screenshot as images/ipad-hero.png (falls back to images/hero.png, same app on both!) -->
         <div class="tablet">
           <div class="tablet-screen">
-            <img src="images/ipad-hero.png" alt="Whiteboard Kids app on iPad-drawing screen"
+            <img src="images/ipad-hero.png" alt="Whiteboard Kids app on an Android tablet-drawing screen"
               style="position:absolute;inset:0"
               onerror="if(!this.dataset.fb){this.dataset.fb=1;this.src='images/hero.png'}else{this.remove()}" />
           </div>
@@ -2227,13 +2230,13 @@
               <span class="frame-emoji">🎨</span>
               <strong>Your app screenshot goes here</strong>
               <div class="mini-canvas"></div>
-              <em>Save your landscape iPhone screenshot as <b>images/hero.png</b></em>
+              <em>Save your landscape phone screenshot as <b>images/hero.png</b></em>
             </div>
             <img src="images/hero.png" alt="Whiteboard Kids app-drawing screen in landscape"
               style="position:absolute;inset:0" onerror="this.remove()" />
           </div>
         </div>
-        <p class="orient-tag"><span class="spin-phone">📱</span> Sideways on iPhone &amp; iPad-big screen, big art!</p>
+        <p class="orient-tag"><span class="spin-phone">📱</span> Sideways on Android phones &amp; tablets-big screen, big art!</p>
       </div>
     </div>
   </header>
@@ -2243,10 +2246,10 @@
     <div class="marquee">
       <span>DRAW <i class="m-dot">✦</i> COLOR <i class="m-dot">✦</i> PAINT <i class="m-dot">✦</i> FILL <i
           class="m-dot">✦</i> ERASE <i class="m-dot">✦</i> CREATE <i class="m-dot">✦</i> GIGGLE <i class="m-dot">✦</i>
-        REPEAT <i class="m-dot">✦</i> ON IPHONE <i class="m-dot">✦</i> ON IPAD <i class="m-dot">✦</i></span>
+        REPEAT <i class="m-dot">✦</i> ON ANDROID PHONES <i class="m-dot">✦</i> ON ANDROID TABLETS <i class="m-dot">✦</i></span>
       <span>DRAW <i class="m-dot">✦</i> COLOR <i class="m-dot">✦</i> PAINT <i class="m-dot">✦</i> FILL <i
           class="m-dot">✦</i> ERASE <i class="m-dot">✦</i> CREATE <i class="m-dot">✦</i> GIGGLE <i class="m-dot">✦</i>
-        REPEAT <i class="m-dot">✦</i> ON IPHONE <i class="m-dot">✦</i> ON IPAD <i class="m-dot">✦</i></span>
+        REPEAT <i class="m-dot">✦</i> ON ANDROID PHONES <i class="m-dot">✦</i> ON ANDROID TABLETS <i class="m-dot">✦</i></span>
     </div>
   </div>
 
@@ -2272,7 +2275,7 @@
         </div>
       </div>
       <p class="reveal d4" style="text-align:center;margin-top:1.6rem;font-weight:800;color:var(--ink-soft)">
-        One app, two screens-everything works exactly the same on 📱 iPhone and 📲 iPad.
+        One app, two screens-everything works exactly the same on 📱 Android phones and 📲 tablets.
       </p>
     </div>
   </section>
@@ -2284,7 +2287,7 @@
         <span class="kicker k-red">The Toolbox</span>
         <h2>6+ tools. A million masterpieces. 🛠️</h2>
         <p>Every tool is big, friendly and built for small fingers-no fiddly menus, no wrong answers, just pure
-          creating. Works beautifully on both iPhone &amp; iPad.</p>
+          creating. Works beautifully on Android phones &amp; tablets.</p>
       </div>
       <div class="tools-grid">
         <div class="tool-card reveal" style="--tc:var(--red)">
@@ -2331,7 +2334,7 @@
         <span class="kicker">Coloring Worlds</span>
         <h2>Pick a world. Color it yours. 🌈</h2>
         <p>Whiteboard Kids comes packed with coloring categories-every page a new adventure waiting for color, on
-          iPhone and iPad alike.</p>
+          Android phones and tablets alike.</p>
       </div>
       <div class="cats-grid">
         <div class="cat-card reveal" style="--cc:var(--yellow)"><span class="cat-emoji">🦁</span>
@@ -2375,8 +2378,8 @@
       <div class="section-head centered reveal">
         <span class="kicker k-blue">Sneak Peek</span>
         <h2>Peek inside the app 👀</h2>
-        <p>Real screens from Whiteboard Kids on iPhone &amp; iPad-held sideways, just how kids play it. Same joyful
-          app on both, just a bigger canvas on iPad. Swipe through and see where the magic happens.</p>
+        <p>Real screens from Whiteboard Kids on Android phones &amp; tablets-held sideways, just how kids play it. Same joyful
+          app on both, just a bigger canvas on a tablet. Swipe through and see where the magic happens.</p>
       </div>
     </div>
 
@@ -2391,7 +2394,7 @@
               style="position:absolute;inset:0" onerror="this.remove()" />
           </div>
         </div>
-        <figcaption>The Drawing Board<small>Free-draw with every tool · 📱 iPhone</small></figcaption>
+        <figcaption>The Drawing Board<small>Free-draw with every tool · 📱 Phone</small></figcaption>
       </figure>
       <figure class="shot reveal d1">
         <div class="phone">
@@ -2403,34 +2406,34 @@
               onerror="this.remove()" />
           </div>
         </div>
-        <figcaption>Tap-to-Fill Coloring<small>One tap, instant color · 📱 iPhone</small></figcaption>
+        <figcaption>Tap-to-Fill Coloring<small>One tap, instant color · 📱 Phone</small></figcaption>
       </figure>
       <figure class="shot reveal d2">
         <div class="tablet">
           <div class="tablet-screen">
-            <div class="screen-placeholder"><span class="frame-emoji">📲</span><strong>iPad drawing board</strong>
+            <div class="screen-placeholder"><span class="frame-emoji">📲</span><strong>Tablet drawing board</strong>
               <div class="mini-canvas"></div><em>images/ipad-1.png</em>
             </div>
-            <!-- 📸 Drop an iPad screenshot as images/ipad-1.png (falls back to the iPhone shot-same app on both!) -->
-            <img src="images/ipad-1.png" alt="Whiteboard Kids on iPad-drawing board" style="position:absolute;inset:0"
+            <!-- 📸 Drop a tablet screenshot as images/ipad-1.png (falls back to the phone shot-same app on both!) -->
+            <img src="images/ipad-1.png" alt="Whiteboard Kids on a tablet-drawing board" style="position:absolute;inset:0"
               onerror="if(!this.dataset.fb){this.dataset.fb=1;this.src='images/screen-1.png'}else{this.remove()}" />
           </div>
         </div>
-        <figcaption>Same Magic on iPad<small>A bigger canvas for bigger art · 📲 iPad</small></figcaption>
+        <figcaption>Same Magic on Tablet<small>A bigger canvas for bigger art · 📲 Tablet</small></figcaption>
       </figure>
       <figure class="shot reveal d4">
         <div class="tablet">
           <div class="tablet-screen">
-            <div class="screen-placeholder"><span class="frame-emoji">📲</span><strong>iPad coloring</strong>
+            <div class="screen-placeholder"><span class="frame-emoji">📲</span><strong>Tablet coloring</strong>
               <div class="mini-canvas"></div><em>images/ipad-2.png</em>
             </div>
-            <!-- 📸 Drop an iPad screenshot as images/ipad-2.png (falls back to the iPhone shot-same app on both!) -->
-            <img src="images/ipad-2.png" alt="Whiteboard Kids on iPad-coloring screen"
+            <!-- 📸 Drop a tablet screenshot as images/ipad-2.png (falls back to the phone shot-same app on both!) -->
+            <img src="images/ipad-2.png" alt="Whiteboard Kids on a tablet-coloring screen"
               style="position:absolute;inset:0"
               onerror="if(!this.dataset.fb){this.dataset.fb=1;this.src='images/screen-2.png'}else{this.remove()}" />
           </div>
         </div>
-        <figcaption>Coloring on iPad<small>More room for little artists · 📲 iPad</small></figcaption>
+        <figcaption>Coloring on Tablet<small>More room for little artists · 📲 Tablet</small></figcaption>
       </figure>
       <figure class="shot reveal d2">
         <div class="phone">
@@ -2442,7 +2445,7 @@
               onerror="this.remove()" />
           </div>
         </div>
-        <figcaption>Pick a Category<small>Worlds of coloring pages · 📱 iPhone</small></figcaption>
+        <figcaption>Pick a Category<small>Worlds of coloring pages · 📱 Phone</small></figcaption>
       </figure>
       <figure class="shot reveal d3">
         <div class="phone">
@@ -2454,10 +2457,10 @@
               style="position:absolute;inset:0" onerror="this.remove()" />
           </div>
         </div>
-        <figcaption>Rainbow Palette<small>Every color a kid could want · 📱 iPhone</small></figcaption>
+        <figcaption>Rainbow Palette<small>Every color a kid could want · 📱 Phone</small></figcaption>
       </figure>
     </div>
-    <p class="rail-hint"><span class="arrowL">⬅️</span> swipe to explore-iPhone &amp; iPad <span
+    <p class="rail-hint"><span class="arrowL">⬅️</span> swipe to explore-phone &amp; tablet <span
         class="arrowR">➡️</span></p>
   </section>
 
@@ -2468,7 +2471,7 @@
         <span class="kicker k-green">Live Demo</span>
         <h2>Go on… try a doodle! ✏️</h2>
         <p>Here's a tiny taste of Whiteboard Kids, right on this page. The real app has way more magic-buttery-smooth
-          on iPhone &amp; iPad-this is just a warm-up scribble.</p>
+          on Android phones &amp; tablets-this is just a warm-up scribble.</p>
       </div>
 
       <div class="board-wrap reveal">
@@ -2497,8 +2500,8 @@
         <canvas id="board" aria-label="Drawing canvas demo"></canvas>
         <div class="board-foot">
           <span>Psst… try the <b>rainbow brush</b> 🌈</span>
-          <span>The full toybox lives in the app on iPhone &amp; iPad →
-            <a href="https://apps.apple.com/in/app/drawing-color-paint-board/id6760696494" target="_blank"
+          <span>The full toybox lives in the app on Android phones &amp; tablets →
+            <a href="https://play.google.com/store/apps/details?id=com.whiteboardkids.app" target="_blank"
               rel="noopener" style="text-decoration:underline;font-weight:900">Get Whiteboard Kids</a>
           </span>
         </div>
@@ -2513,7 +2516,7 @@
         <span class="kicker k-blue">Color Fill</span>
         <h2>Fill inside the objects! 🪣</h2>
         <p>Pick a color and scribble inside the circle or the sun-your brush magically stays inside the lines, just
-          like in the app on iPhone &amp; iPad. ☀️</p>
+          like in the app on Android phones &amp; tablets. ☀️</p>
       </div>
 
       <div class="board-wrap reveal" style="max-width:760px;margin:0 auto">
@@ -2548,7 +2551,7 @@
       <div class="section-head centered reveal">
         <span class="kicker k-orange">What's Inside</span>
         <h2>More than just drawing 🌟</h2>
-        <p>Whiteboard Kids is a full creative learning world-color, learn, explore and grow, on iPhone &amp; iPad.
+        <p>Whiteboard Kids is a full creative learning world-color, learn, explore and grow, on Android phones &amp; tablets.
         </p>
       </div>
 
@@ -2595,18 +2598,18 @@
 
       <!-- bottom tag strip -->
       <div style="margin-top:2.4rem;display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center" class="reveal">
-        <span class="apple-chip">📚 200+ coloring images</span>
-        <span class="apple-chip">🔤 Alphabets</span>
-        <span class="apple-chip">🦁 Animals</span>
-        <span class="apple-chip">🚗 Vehicles</span>
-        <span class="apple-chip">🐦 Birds</span>
-        <span class="apple-chip">🥦 Vegetables</span>
-        <span class="apple-chip">🧚 Fairy Tales</span>
-        <span class="apple-chip">🐠 Under the Sea</span>
-        <span class="apple-chip">🌀 Mandala Coloring</span>
-        <span class="apple-chip">✨ More coming soon</span>
-        <span class="apple-chip">📱 iPhone</span>
-        <span class="apple-chip">📲 iPad</span>
+        <span class="info-chip">📚 200+ coloring images</span>
+        <span class="info-chip">🔤 Alphabets</span>
+        <span class="info-chip">🦁 Animals</span>
+        <span class="info-chip">🚗 Vehicles</span>
+        <span class="info-chip">🐦 Birds</span>
+        <span class="info-chip">🥦 Vegetables</span>
+        <span class="info-chip">🧚 Fairy Tales</span>
+        <span class="info-chip">🐠 Under the Sea</span>
+        <span class="info-chip">🌀 Mandala Coloring</span>
+        <span class="info-chip">✨ More coming soon</span>
+        <span class="info-chip">📱 Android Phone</span>
+        <span class="info-chip">📲 Android Tablet</span>
       </div>
 
     </div>
@@ -2777,10 +2780,10 @@
           </div>
         </div>
         <div class="parent-card reveal d3" style="--pc:var(--green)">
-          <div class="parent-icon">🍎</div>
+          <div class="parent-icon">🤖</div>
           <div>
-            <h3>At home on Apple</h3>
-            <p>Crafted for iPhone and iPad-smooth, responsive drawing that feels great under tiny fingertips.</p>
+            <h3>At home on Android</h3>
+            <p>Crafted for Android phones and tablets-smooth, responsive drawing that feels great under tiny fingertips.</p>
           </div>
         </div>
       </div>
@@ -2902,7 +2905,7 @@
       <div class="section-head centered reveal">
         <span class="kicker k-green">Loved Worldwide</span>
         <h2>Little artists, big smiles 🌍</h2>
-        <p>Real words from happy families across the globe, drawing on iPhone &amp; iPad. Tap a country to see reviews
+        <p>Real words from happy families across the globe. Tap a country to see reviews
           from there.</p>
       </div>
 
@@ -2919,24 +2922,26 @@
     <div class="container reveal">
       <span class="confetti-row">🎉 🖍️ 🌈 ⭐ 🎨</span>
       <h2>Ready to unleash your little artist?</h2>
-      <p>Download Whiteboard Kids today on iPhone or iPad and watch the masterpieces (and the giggles) roll in. Free
+      <p>Download Whiteboard Kids today on your Android phone or tablet and watch the masterpieces (and the giggles) roll in. Free
         space on the fridge not included.</p>
-      <a class="appstore-badge" style="scale:1.15"
-        href="https://apps.apple.com/in/app/drawing-color-paint-board/id6760696494" target="_blank" rel="noopener"
-        aria-label="Download Whiteboard Kids on the App Store">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path
-            d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.53 4.08zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
+      <a class="playstore-badge" style="scale:1.15"
+        href="https://play.google.com/store/apps/details?id=com.whiteboardkids.app" target="_blank" rel="noopener"
+        aria-label="Get Whiteboard Kids on Google Play">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="#4285F4" d="M1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924z" />
+          <path fill="#34A853" d="M13.544 10.989l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973z" />
+          <path fill="#FBBC04" d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594z" />
+          <path fill="#EA4335" d="M13.544 13.056l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z" />
         </svg>
-        <span class="txt"><small>DOWNLOAD ON THE</small><strong>App Store</strong></span>
+        <span class="txt"><small>GET IT ON</small><strong>Google Play</strong></span>
       </a>
-      <div class="apple-row">
-        <span class="apple-chip">📱 iPhone</span>
-        <span class="apple-chip">📲 iPad</span>
-        <span class="apple-chip">🔄 Plays sideways-full-screen fun!</span>
-        <span class="apple-chip">🍎 Apple exclusive-for now!</span>
+      <div class="chip-row">
+        <span class="info-chip">📱 Android Phone</span>
+        <span class="info-chip">📲 Android Tablet</span>
+        <span class="info-chip">🔄 Plays sideways-full-screen fun!</span>
+        <span class="info-chip">🤖 Made for Android</span>
       </div>
-      <p class="cta-note">Search “Whiteboard kids” on the App Store</p>
+      <p class="cta-note">Search “Whiteboard kids” on Google Play</p>
     </div>
   </section>
 
@@ -2958,13 +2963,13 @@
           <a href="#parents">Parents</a>
           <a href="privacy.html">Privacy</a>
           <a href="terms.html">Terms of Use</a>
-          <a href="https://apps.apple.com/in/app/drawing-color-paint-board/id6760696494" target="_blank"
-            rel="noopener">App Store ↗</a>
+          <a href="https://play.google.com/store/apps/details?id=com.whiteboardkids.app" target="_blank"
+            rel="noopener">Google Play ↗</a>
         </div>
       </div>
       <div class="foot-bottom">
         <span>© 2026 Whiteboard Kids. All scribbles reserved.</span>
-        <span class="made">Made with 🖍️ for tiny artists everywhere-on iPhone &amp; iPad</span>
+        <span class="made">Made with 🖍️ for tiny artists everywhere-on Android phones &amp; tablets</span>
       </div>
     </div>
   </footer>
